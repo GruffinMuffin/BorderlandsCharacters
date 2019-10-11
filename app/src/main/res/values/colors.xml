@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#F7C500</color>
+    <color name="colorPrimaryDark">#010405</color>
+    <color name="colorAccent">#9A0703</color>
+
+    <!-- COLOR PARAMETERS FOR PLAYER SELECTION -->
+    <color name="colorPrimaryFl4k">#56462B</color>
+    <color name="colorSecondaryFl4k">#44251B</color>
+    <color name="colorAccentFl4k">#5FE25E</color>
+
+    <color name="colorPrimaryZane">#362E32</color>
+    <color name="colorSecondaryZane">#526873</color>
+    <color name="colorAccentZane">#D4AB10</color>
+
+    <color name="colorPrimaryMoze">#322B2D</color>
+    <color name="colorSecondaryMoze">#575553</color>
+    <color name="colorAccentMoze">#AB3F41</color>
+
+    <color name="colorPrimaryAmara">#923790</color>
+    <color name="colorSecondaryAmara">#14102B</color>
+    <color name="colorAccentAmara">#38A5DD</color>
+</resources>

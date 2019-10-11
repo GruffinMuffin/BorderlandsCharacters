@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">BorderlandsCharacters</string>
+
+    <string name="zane">Operative</string>
+    <string name="fl4k">Beastmaster</string>
+    <string name="amara">Siren</string>
+    <string name="moze">Gunner</string>
+
+
+    <string name="fl4k_description">FL4K is a wandering robot who always brings one of their three loyal pets into battle to buff stats and attack enemies. Their action skills let them send forth dive-bombing Rakk, teleport Gamma Burst-irradiated pets through rifts, and even Fade Away to temporarily become invisible while moving faster and regenerating health.</string>
+    <string name="moze_description">Moze is a battle-hardened former Vladof army soldier who specializes in mechanized combat. She uses an action skill to digistruct and climb into her bipedal tank, Iron Bear, which has hardpoints suitable for mixing, matching, and mounting high-velocity Railguns, rapid-firing Miniguns, semi-automatic Grenade Launchers, flamethrowers, pneumatic fists, and homing rocket launchers.</string>
+    <string name="zane_description">Born into Pandora\'s notorious Flynt family, Zane is a semi-retired corporate hitman who always has a gadget up his sleeve. His action skills include a SNTNL drone that flys around and attacks enemies with a machine gun, a deployable Barrier shield, and a Digi-Clone that simultaneously distracts enemies and dishes out damage and which Zane can teleport to switch places with.</string>
+    <string name="amara_description">Gifted with powerful Siren abilities, Amara is a renowned champion of the people and bonafide badass. Using her action skills she can Phaseslam the ground to damage nearby enemies and knock them into the air, Phasegrasp enemies in place with a giant ethereal fist, or even Phasecast an astral projection of herself that deals damage to everything in its path.</string>
+</resources>
