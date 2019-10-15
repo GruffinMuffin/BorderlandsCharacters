@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
     Button selectNewCharacter;
     ImageView fl4kView;
     TextView fl4kBio;
+    TextView main_header_title;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,16 +47,17 @@ public class MainActivity extends AppCompatActivity {
         String charName = characterInput.getText().toString().trim();
         Log.d("Character Name" , characterInput.getText().toString());
 
-        if /*(charName == "FL4K")*/ (characterInput.getText().toString().trim().length() < 1)
+        if /*(charName == "FL4K")*/ (charName.equals("FL4K"))
     {
             continueWithSelectedCharacter.setVisibility(View.GONE);
             characterInput.setVisibility(View.GONE);
+            main_header_title.setVisibility(View.GONE);
             fl4kView.setVisibility(View.VISIBLE);
             fl4kBio.setVisibility(View.VISIBLE);
             selectNewCharacter.setVisibility(View.VISIBLE);
 
         }
-        else if (characterInput.getText().toString() == "Amara"){
+        /*else if (characterInput.getText().toString() == "Amara"){
             continueWithSelectedCharacter.setVisibility(View.GONE);
             characterInput.setVisibility(View.GONE);
             //amaraView.setVisibility(View.VISIBLE);
@@ -75,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
             //zaneView.setVisibility(View.VISIBLE);
             //zaneBio.setVisibility(View.VISIBLE);
             selectNewCharacter.setVisibility(View.VISIBLE);
-        }
+        }*/
         else {
             Toast.makeText(this, "Staaiirs! I can't climb stairs!", Toast.LENGTH_SHORT).show();
         }

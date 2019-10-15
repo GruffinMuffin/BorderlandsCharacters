@@ -66,7 +66,9 @@
         android:textSize="18sp"
         android:visibility="gone"
         tools:layout_editor_absoluteX="27dp"
-        tools:layout_editor_absoluteY="467dp" />
+        tools:layout_editor_absoluteY="467dp"
+        app:layout_constraintBottom_toTopOf="@id/select_new_character"
+        app:layout_constraintLeft_toLeftOf="parent"/>
 
     <ImageView
         android:id="@+id/fl4kView"
@@ -75,6 +77,8 @@
         android:visibility="gone"
         app:srcCompat="@drawable/fl4k"
         tools:layout_editor_absoluteX="69dp"
-        tools:layout_editor_absoluteY="-8dp" />
+        tools:layout_editor_absoluteY="-8dp"
+        app:layout_constraintBottom_toTopOf="@id/fl4kBio"
+        app:layout_constraintLeft_toLeftOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
