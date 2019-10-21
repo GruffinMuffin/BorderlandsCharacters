@@ -38,11 +38,11 @@ public class MainActivity extends AppCompatActivity {
          *   becomes: main_header_title = findViewById(R.id.main_header_title);
          */
 
-        TextView main_header_title = findViewById(R.id.main_header_title);
-        Button continueWithSelectedCharacter = findViewById(R.id.continue_with_selected_character);
-        Button selectNewCharacter = findViewById(R.id.select_new_character);
-        ImageView fl4kView = findViewById(R.id.fl4kView);
-        TextView fl4kBio = findViewById(R.id.fl4kBio);
+        main_header_title = findViewById(R.id.main_header_title);
+        continueWithSelectedCharacter = findViewById(R.id.continue_with_selected_character);
+        selectNewCharacter = findViewById(R.id.select_new_character);
+        fl4kView = findViewById(R.id.fl4kView);
+        fl4kBio = findViewById(R.id.fl4kBio);
         //  ImageView amaraView = findViewById(R.id.amaraView); // setting these up for later for when I have them created
         //  TextView amaraBio = findViewById(R.id.amaraBio);
         //  ImageView mozeView = findViewById(R.id.mozeView);
