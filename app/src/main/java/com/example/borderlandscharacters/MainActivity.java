@@ -28,6 +28,16 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         characterInput = findViewById(R.id.input_char);
+
+        /*   TODO: NOTES FROM BAILEYBREW
+         *   These are declared as GLOBAL and LOCAL which means that the GLOBAL references aren't getting updated,
+         *   because your code assumes that the local is what needs the assignment --- get rid of the declarations
+         *   in front of the view names - This will apply those declarations to the GLOBAL refs instead of LOCAL
+         *
+         *   IE: TextView main_header_title = findViewById(R.id.main_header_title);
+         *   becomes: main_header_title = findViewById(R.id.main_header_title);
+         */
+
         TextView main_header_title = findViewById(R.id.main_header_title);
         Button continueWithSelectedCharacter = findViewById(R.id.continue_with_selected_character);
         Button selectNewCharacter = findViewById(R.id.select_new_character);
@@ -43,9 +53,22 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void VerifyCharacterClick(View view) {
-        characterInput = findViewById(R.id.input_char);
+
+        /*    TODO: NOTES FROM BAILEYBREW
+         *    characterInput = findViewById(R.id.input_char);
+         *    This is unneccessary because you already declare the view definition in the onCreate Method above
+         */
         String charName = characterInput.getText().toString().trim();
-        Log.d("Character Name" , characterInput.getText().toString());
+
+        /*   TODO: NOTES FROM BAILEYBREW
+         *   Log.d("Character Name" , characterInput.getText().toString());
+         *
+         *   Since you just declared the string charName, you should use that variable in your LOG since that's the
+         *   data that will matter moving forward.
+         */
+
+        Log.d("Char Name", charName);
+
 
         if /*(charName == "FL4K")*/ (charName.equals("FL4K"))
     {
