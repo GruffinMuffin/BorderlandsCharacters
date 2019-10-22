@@ -4,6 +4,8 @@
     <color name="colorPrimaryDark">#010405</color>
     <color name="colorAccent">#9A0703</color>
 
+    <color name="noCharacterSelected">#FFC800</color>
+
     <!-- COLOR PARAMETERS FOR PLAYER SELECTION -->
     <color name="colorPrimaryFl4k">#56462B</color>
     <color name="colorSecondaryFl4k">#44251B</color>

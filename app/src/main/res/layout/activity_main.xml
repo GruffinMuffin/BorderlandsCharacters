@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/background"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFC800"
@@ -58,27 +59,49 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent" />
 
-    <TextView
-        android:id="@+id/fl4kBio"
-        android:layout_width="348dp"
-        android:layout_height="248dp"
-        android:text="An emergent AI driven in an ongoing quest for self-discovery, FL4K wanders from world to world accompanied by beasts. While they feel an connection with the primal wisdom of animals, the social construct of humans are strange to them. On their endless hunt, FL4K’s loyal Skag, Spiderant, and Jabber companions help them track and claim their quarry, be it human, Vault Monster, or anything in between."
-        android:textSize="18sp"
+    <ScrollView
+        android:id="@+id/charScroll"
+        android:layout_width="300dp"
+        android:layout_height="200dp"
         android:visibility="gone"
-        tools:layout_editor_absoluteX="27dp"
-        tools:layout_editor_absoluteY="467dp"
         app:layout_constraintBottom_toTopOf="@id/select_new_character"
-        app:layout_constraintLeft_toLeftOf="parent"/>
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_editor_absoluteX="27dp"
+        tools:layout_editor_absoluteY="467dp">
+
+        <TextView
+            android:id="@+id/charBio"
+            android:layout_width="300dp"
+            android:layout_height="200dp"
+            android:text="An emergent AI driven in an ongoing quest for self-discovery, FL4K wanders from world to world accompanied by beasts. While they feel an connection with the primal wisdom of animals, the social construct of humans are strange to them. On their endless hunt, FL4K’s loyal Skag, Spiderant, and Jabber companions help them track and claim their quarry, be it human, Vault Monster, or anything in between."
+            android:textSize="18sp" />
+    </ScrollView>
+
 
     <ImageView
         android:id="@+id/fl4kView"
-        android:layout_width="272dp"
-        android:layout_height="501dp"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:scaleType="centerInside"
         android:visibility="gone"
-        app:srcCompat="@drawable/fl4k"
-        tools:layout_editor_absoluteX="69dp"
-        tools:layout_editor_absoluteY="-8dp"
-        app:layout_constraintBottom_toTopOf="@id/fl4kBio"
-        app:layout_constraintLeft_toLeftOf="parent"/>
+        app:layout_constraintBottom_toTopOf="@id/charScroll"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/fl4k" />
 
+    <TextView
+        android:id="@+id/charTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textSize="48sp"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="169dp"
+        tools:layout_editor_absoluteY="72dp" />
+    original height is 350, width is 272
 </androidx.constraintlayout.widget.ConstraintLayout>
