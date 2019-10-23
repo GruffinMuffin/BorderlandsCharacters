@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
 
         characterInput = findViewById(R.id.input_char);
 
-        /*   TODO: NOTES FROM BAILEYBREW
+        /*   NOTES FROM BAILEYBREW
          *   These are declared as GLOBAL and LOCAL which means that the GLOBAL references aren't getting updated,
          *   because your code assumes that the local is what needs the assignment --- get rid of the declarations
          *   in front of the view names - This will apply those declarations to the GLOBAL refs instead of LOCAL
@@ -70,7 +70,18 @@ public class MainActivity extends AppCompatActivity {
             charScroll.setVisibility(View.VISIBLE);
             charView.setVisibility(View.VISIBLE);
             charTitle.setVisibility(View.VISIBLE);
+
+            // TODO: HINT FROM BAILEY BREW -- I would put this in your Main or hardcode it in the XML
+            // TODO: Because now, if you enter an invalid name it still applies the BGCOLOR change
             background.setBackgroundColor(defaultColor);
+
+            /*
+             * TODO: HINT FROM BAILEYBREW
+             *  This is a valid way to get colors and store them as values,
+             *  But you're doubling up your code by defining it as an int
+             *  You can just use 2nd half of the statements below ( getResources().getColor(R.color.colorNameHere) )
+             *  inside the .setTextColor .setBackgroundColor methods
+             */
             int defaultColor = getResources().getColor(R.color.noCharacterSelected);
             int colorPrimaryFL4k = getResources().getColor(R.color.colorPrimaryFl4k);
             int colorSecondaryFL4K = getResources().getColor(R.color.colorSecondaryFl4k);
