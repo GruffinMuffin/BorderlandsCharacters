@@ -27,13 +27,15 @@ public class MainActivity extends AppCompatActivity {
     TextView main_header_title;
     TextView charTitle;
     ConstraintLayout background;
-    int defaultColor;
+    int noCharacterSelected;
+    TextView charClass;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         characterInput = findViewById(R.id.input_char);
+        noCharacterSelected = getResources().getColor(R.color.noCharacterSelected);
 
         /*   TODO: NOTES FROM BAILEYBREW
          *   These are declared as GLOBAL and LOCAL which means that the GLOBAL references aren't getting updated,
@@ -43,15 +45,18 @@ public class MainActivity extends AppCompatActivity {
          *   IE: TextView main_header_title = findViewById(R.id.main_header_title);
          *   becomes: main_header_title = findViewById(R.id.main_header_title);
          */
-
         main_header_title = findViewById(R.id.main_header_title);
         continueWithSelectedCharacter = findViewById(R.id.continue_with_selected_character);
         selectNewCharacter = findViewById(R.id.select_new_character);
-        charView = findViewById(R.id.fl4kView);
+        charView = findViewById(R.id.charView);
         charScroll = findViewById(R.id.charScroll);
         charBio = findViewById(R.id.charBio);
         charTitle = findViewById(R.id.charTitle);
         background = findViewById(R.id.background);
+        charClass = findViewById(R.id.charClass);
+        background.setBackgroundColor(noCharacterSelected);
+
+
 
     }
 
@@ -70,11 +75,20 @@ public class MainActivity extends AppCompatActivity {
             charScroll.setVisibility(View.VISIBLE);
             charView.setVisibility(View.VISIBLE);
             charTitle.setVisibility(View.VISIBLE);
-            background.setBackgroundColor(defaultColor);
-            int defaultColor = getResources().getColor(R.color.noCharacterSelected);
+            charClass.setVisibility(View.VISIBLE);
+            background.setBackgroundColor(noCharacterSelected);
             int colorPrimaryFL4k = getResources().getColor(R.color.colorPrimaryFl4k);
             int colorSecondaryFL4K = getResources().getColor(R.color.colorSecondaryFl4k);
             int colorAccentFL4K = getResources().getColor(R.color.colorAccentFl4k);
+            int colorPrimaryMoze = getResources().getColor(R.color.colorPrimaryMoze);
+            int colorSecondaryMoze = getResources().getColor(R.color.colorSecondaryMoze);
+            int colorAccentMoze = getResources().getColor(R.color.colorAccentMoze);
+            int colorPrimaryZane = getResources().getColor(R.color.colorPrimaryZane);
+            int colorSecondaryZane = getResources().getColor(R.color.colorSecondaryZane);
+            int colorAccentZane = getResources().getColor(R.color.colorAccentZane);
+            int colorPrimaryAmara = getResources().getColor(R.color.colorPrimaryAmara);
+            int colorSecondaryAmara = getResources().getColor(R.color.colorSecondaryAmara);
+            int colorAccentAmara = getResources().getColor(R.color.colorAccentAmara);
 
             String character = charName;
             switch (character){
@@ -84,24 +98,39 @@ public class MainActivity extends AppCompatActivity {
                     charView.setImageResource(R.drawable.fl4k);
                     charTitle.setText("FL4K");
                     charTitle.setTextColor(colorAccentFL4K);
+                    charClass.setText("The Beastmaster");
+                    charClass.setTextColor(colorSecondaryFL4K);
                     background.setBackgroundColor(colorPrimaryFL4k);
-
-
                     break;
                 case "Moze":
                     charBio.setText("Once a soldier in the Vladof army’s Ursa Corps, Moze left their service to pursue her own mercenary interests and hunt for Vaults.When the going gets tough, she can use her digistruct pack to summon her heavy mech “Iron Bear” and face down an army without flinching, using powerful mounted weapons to mow the opposition down. A veteran of wars from across the six galaxies, Moze and Iron Bear are a force to be reckoned with.");
+                    charBio.setTextColor(colorPrimaryMoze);
                     charView.setImageResource(R.drawable.moze);
                     charTitle.setText("Moze");
+                    charTitle.setTextColor(colorAccentMoze);
+                    charClass.setText("The Gunner");
+                    charClass.setTextColor(colorPrimaryMoze);
+                    background.setBackgroundColor(colorSecondaryMoze);
                     break;
                 case "Amara":
                     charBio.setText("A hero born in the slums of Partali, Amara is most at home on the battlefield or in a brawl. Never content to stand idly by, she uses her Siren abilities, to smash oppressors and dismantle her foes. While in her Phasetrance, she channels her Siren energy to form powerful arms that can shoot blasts of force or crush enemies in their grip. Brash, aggressive, and self-assured, Amara doesn’t let anything stand in her way.");
+                    charBio.setTextColor(colorSecondaryAmara);
                     charView.setImageResource(R.drawable.amara);
                     charTitle.setText("Amara");
+                    charTitle.setTextColor(colorAccentAmara);
+                    charClass.setText("Siren");
+                    charClass.setTextColor(colorSecondaryAmara);
+                    background.setBackgroundColor(colorPrimaryAmara);
                     break;
                 case "Zane":
                     charBio.setText("Zane Flynt, brother of the infamous bandits Captain and Baron Flynt, has been around the galactic block more than a few times. Over the years, he’s worked for, against, and along with every major corporation conducting espionage and assassination for the highest bidder. With cutting edge technology and decades of mercenary experience, Zane uses his Sentinel Drone and other gadgets to disorient, disrupt, and destroy his targets.");
+                    charBio.setTextColor(colorSecondaryZane);
                     charView.setImageResource(R.drawable.zane);
                     charTitle.setText("Zane");
+                    charTitle.setTextColor(colorAccentZane);
+                    charClass.setText("The Operative");
+                    charClass.setTextColor(colorSecondaryZane);
+                    background.setBackgroundColor(colorPrimaryZane);
                     break;
                 default:
                     continueWithSelectedCharacter.setVisibility(View.VISIBLE);
@@ -111,7 +140,8 @@ public class MainActivity extends AppCompatActivity {
                     charScroll.setVisibility(View.GONE);
                     charView.setVisibility(View.GONE);
                     charTitle.setVisibility(View.GONE);
-                    background.setBackgroundColor(defaultColor);
+                    background.setBackgroundColor(noCharacterSelected);
+                    charClass.setVisibility(View.GONE);
 
                     Toast.makeText(this, "Please enter a Borderlands 3 Character", Toast.LENGTH_SHORT).show();
 
@@ -141,7 +171,8 @@ public class MainActivity extends AppCompatActivity {
         charView.setVisibility(View.GONE);
         charTitle.setVisibility(View.GONE);
         characterInput.setText("");
-        background.setBackgroundColor(defaultColor);
+        background.setBackgroundColor(noCharacterSelected);
+        charClass.setVisibility(View.GONE);
         Toast.makeText(this, "So, you want to hear another story, huh? One where the very fate of Pandora hangs in the balance?", Toast.LENGTH_LONG).show();
 
         // Do something to change the visibilities for all views
